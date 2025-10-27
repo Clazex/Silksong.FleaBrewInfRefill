@@ -20,7 +20,7 @@ public sealed partial class FleaBrewInfRefillPlugin : BaseUnityPlugin {
 	}
 
 	private void OnDestroy() {
-#if DEBUG
+#if !DEBUG
 		Logger.LogWarning("Unloading in release build");
 #endif
 		Harmony.UnpatchSelf();
